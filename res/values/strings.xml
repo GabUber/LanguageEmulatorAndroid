@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Language Emulator para Android</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="af">Autômato Finito Determinístico  </string>
+    <string name="afn">Autômato Finito Não-Determinístico  </string>
+    <string name="afnl">Autômato Finito Não-Determinístico Lambda  </string>
+    <string name="ER">Expressão Regular  </string>
+    <string name="gr">Gramática Regular  </string>
+    <string name="mmoore">Máquina de Moore  </string>
+    <string name="mmealy">Máquina de Mealy  </string>
+    <string name="title_activity_aflike">AFLikeActivity</string>
+    <string name="emulInit">Simular</string>
+    <string name="Blank"></string>
+    <string name="criar_estado">Criar Estado</string>
+    <string name="cancel">Cancelar</string>
+    <string name="setInit">Marcar Inicial</string>
+    <string name="setfim">Marcar Final</string>
+    <string name="selftrans">Criar Transição para Sí</string>
+    <string name="statedelete">Apagar Estado</string>
+    <string name="newTrans">Editar Transição</string>
+    <string name="move">Mover</string>
+    <string name="title_activity_er">ERActivity</string>
+    <string name="expressao">Entre a Expressão Regular aqui</string>
+    <string name="ok">OK</string>
+    <string name="padrao">Entre o Padrão aqui</string>
+    <string name="title_activity_gr">GRActivity</string>
+    <string name="esquerda">Esquerda</string>
+    <string name="direita">Direita</string>
+    <string name="novaRegra">Nova Regra: Esquerda</string>
+    <string name="removerRegra">Remover Regra</string>
+    <string name="avisoGR">Apagar gramática atual e começar outra?</string>
+    <string name="novaRegraDireita">Nova Regra: Direita</string>
+    <string name="aceito">Aceito</string>
+    <string name="recusado">Recusado</string>
+    <string name="title_activity_er2">ER2Activity</string>
+    <string name="nomeEstado">Nome do Estado</string>
+    <string name="estadonome">Nome do Estado</string>
+    <string name="transtext">separar por virgula</string>
+    <string name="removeTrans">Remover</string>
+    <string name="emulfim">Parar</string>
+    <string name="entrada">Entrada</string>
+    <string name="fundo">Plano de Fundo em Branco</string>
+    <string name="title_activity_afd">Autômato Finito Determinístico</string>
+    <string name="title_activity_af">AFActivity</string>
+    <string name="start">iniciar</string>
+    <string name="aflikeexplicacao">Para criar um novo estado pressione a tela em qualquer lugar. Para criar uma transição arraste o estado origem ao estado destino. Para iniciar a simulação pressione o botão \&quot;simular\&quot;. Pressione OK para continuar.</string>
+
+</resources>
