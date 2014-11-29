@@ -1,6 +1,7 @@
 package gr;
 
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 import af.AFNL;
 
@@ -16,11 +17,14 @@ public abstract class GR {
 		}
 		@Override
 		public String toString(){
-			StringBuilder s1 = new StringBuilder(transicoesOrigem.get(0));
-			s1.append("->");
+			StringBuilder s1 = new StringBuilder(transicoesOrigem.get(0)).append(' ');
+			s1.append("-> ");
 			StringBuilder s2 = new StringBuilder("");
 			for(int i = 0; i < transicoesEntrada.size(); i++){
-				s2.append((transicoesEntrada.get(i)==null) ? "" : transicoesEntrada.get(i));
+				if(transicoesEntrada.get(i)!=null){
+					s2.append(trataString(transicoesEntrada.get(i)));
+					s2.append(" ");
+				}
 			}
 			StringBuilder s3;
 			if(s2.length()==0&&transicoesDestino.get(transicoesDestino.size()-1).equals("final")) s3=new StringBuilder("λ");
@@ -37,71 +41,57 @@ public abstract class GR {
 		regras=new ArrayList<Regra>();
 		modificado=true;
 	}
-	protected void criaRegra(String origem, String destino, String entrada){
+	protected void criaRegra(String origem, StringTokenizer st){
 		modificado=true;
 		Regra r = new Regra();
-		if(entrada == null) {
+		String s=null;
+		int i=0;
+		if(!st.hasMoreTokens()){
 			r.transicoesOrigem.add(origem);
 			r.transicoesEntrada.add(null);
-			if(destino==null){
-				r.transicoesDestino.add("final");
-			}
-			else {
-				r.transicoesDestino.add(destino);
-			}
+			r.transicoesDestino.add("final");
 		}
-		else {
-			r.transicoesOrigem.add(origem);
-			int n = entrada.length()-1;
-			if(n==0){
-				r.transicoesEntrada.add(entrada);
-			}
-			else{
-				for(int i = 0; i < n; i++){
-					if(i!=0) r.transicoesOrigem.add("_"+((Integer)(i-1)).toString());
+		else{
+			while (st.hasMoreTokens()){
+				s=st.nextToken();
+				if(i==0)r.transicoesOrigem.add(origem); 
+				else r.transicoesOrigem.add("_"+((Integer)(i-1)).toString());
+				if(!temMaiuscula(s)){
 					r.transicoesDestino.add("_"+((Integer)i).toString());
-					r.transicoesEntrada.add( ( ( Character ) ( entrada.charAt ( i ) ) ).toString ( ) );
+					r.transicoesEntrada.add(trataString(s));
 				}
-				r.transicoesOrigem.add("_"+((Integer)(n-1)).toString());
-				r.transicoesEntrada.add( ( ( Character ) ( entrada.charAt ( n ) ) ).toString ( ) );
+				else {
+					r.transicoesDestino.add(trataString(s.toUpperCase()));
+					r.transicoesEntrada.add(null);
+				}
+				i++;		
 			}
-			if(destino==null){
+			if(!temMaiuscula(s)){
+				r.transicoesDestino.remove(i-1);
 				r.transicoesDestino.add("final");
-			}
-			else{
-				r.transicoesDestino.add(destino);
 			}
 		}
 		regras.add(r);
 	}
 	public void novaRegra(String parteEsquerda, String parteDireita){
-		String parteDireitaTratada = trataString(parteDireita);
-		int transicao=parteDireitaTratada.length();
-		for(int i = 0; i<transicao; i++){
-			if(Character.isUpperCase(parteDireitaTratada.charAt(i))){
-				transicao=i;
-			}
-		}
-		String entrada, destino;
-		if(transicao==parteDireitaTratada.length()){
-			destino = null;
-			if(parteDireitaTratada.length()==0){
-				entrada = null;
-			}
-			else entrada = parteDireitaTratada;
-		}
-		else if (transicao==0){
-			entrada=null;
-			destino=parteDireitaTratada.toUpperCase();
-		}
-		else{
-			entrada = parteDireitaTratada.substring(0, transicao);
-			destino = (parteDireitaTratada.substring(transicao)).toUpperCase();
-		}
-		criaRegra(parteEsquerda, destino, entrada);
+		StringTokenizer parteDireitaTratada = new StringTokenizer(trataString(parteDireita));
+		
+		criaRegra(parteEsquerda, parteDireitaTratada);
 	}
 	public void removeRegra(int n){
 		if(regras.size()>n)regras.remove(n);
+		modificado=true;
+	}
+	protected boolean temMaiuscula(String s){
+		for (int i=0;i<s.length();i++) if(Character.isUpperCase(s.charAt(i)))return true;
+		return false;
+	}
+	public void moveRegra(int n){
+		Regra r;
+		if(regras.size()>n){
+			r = regras.remove(n);
+			regras.add(0, r);
+		}
 		modificado=true;
 	}
 	@Override
@@ -116,20 +106,33 @@ public abstract class GR {
 	}
 	public void preparaSimulacao(){
 		if (modificado){
+			ArrayList<String> nomes = new ArrayList<String>();
 			afnl=new AFNL();
-			for (int i = 0; i < regras.size(); i++){
-				for(int j=0; j < regras.get(i).transicoesOrigem.size(); j++){
-					String origem = (regras.get(i).transicoesOrigem.get(j).charAt(0)=='_') ? "_" + i + regras.get(i).transicoesOrigem.get(j) : regras.get(i).transicoesOrigem.get(j);
-					String destino = (regras.get(i).transicoesDestino.get(j).charAt(0)=='_') ? "_"+i + regras.get(i).transicoesDestino.get(j): regras.get(i).transicoesDestino.get(j);
+			if(regras.size()==0) return;
+			int max = regras.size();
+			for (int i = 0; i < max; i++){
+				Regra r = regras.get(i);
+				int max2 = r.transicoesOrigem.size();
+				for(int j=0; j < max2; j++){
+					String a = r.transicoesDestino.get(j);
+					if(a.charAt(0)=='_'){
+						a="A"+i+a;
+						while(nomes.contains(a)) a+="'";
+						if(j<max2-1) r.transicoesOrigem.set(j+1, a);
+					}
+					nomes.add(a);
+					String origem = r.transicoesOrigem.get(j);
+					String destino = a;
+					String entrada = r.transicoesEntrada.get(j);
 					try{
 						afnl.adicionaEstado(origem);
 					}
-					catch(RuntimeException r){}
+					catch(RuntimeException rte){}
 					try{
 						afnl.adicionaEstado(destino);
 					}
-					catch(RuntimeException r){}
-					afnl.adicionaTransicao(origem, destino, regras.get(i).transicoesEntrada.get(j));
+					catch(RuntimeException rte){}
+					afnl.adicionaTransicao(origem, destino, entrada);
 				}
 			}
 			afnl.togglaInicial(regras.get(0).transicoesOrigem.get(0));
@@ -145,9 +148,14 @@ public abstract class GR {
 	public boolean simula(String entrada){
 		boolean resposta=aceitaVazio;
 		String entradaTratada = trataString(entrada);
-		for(int i = 0; i < entrada.length(); i++){
-			resposta=afnl.simula(((Character)(entradaTratada.charAt(i))).toString());
-		}
+		StringTokenizer sb = new StringTokenizer(entradaTratada);
+		resposta=afnl.simula(sb);
 		return resposta;
+	}
+	public AFNL retornaAF(){
+		if(modificado){
+			preparaSimulacao();
+		}
+		return afnl;
 	}
 }

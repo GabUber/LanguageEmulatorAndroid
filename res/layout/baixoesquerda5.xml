@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/aflikeleiaute5baixoesquerda"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:background="@drawable/fundomenubaixoesquerda"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <EditText
+            android:id="@+id/aflikeentradatransicoesbaixoesquerda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/transtext"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/aflikeokleiaute5baixoesquerda"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:background="@drawable/menuinicialbotao"
+                android:onClick="criaTransicoes"
+                android:text="@string/ok"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+	        <Button
+	            android:id="@+id/aflikeremovetransicaobaixoesquerda"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="105dp"
+	            android:layout_height="28dp"
+	            android:layout_gravity="center"
+	            android:background="@drawable/fundobotao"
+	            android:gravity="center_vertical|center"
+	            android:onClick="removeTransicao"
+	            android:text="@string/removeTrans"
+	            android:textColor="@android:color/white"
+	            android:textSize="12sp" />
+
+		</LinearLayout>
+
+    
+
+</LinearLayout>

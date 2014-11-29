@@ -3,21 +3,19 @@ package edu.poc.languageemulatorandroid;
 import java.util.StringTokenizer;
 
 import af.AFN;
-import android.os.Bundle;
+import estado.Estado;
 
 public class AFNActivity extends AFActivity{
 	@Override
-	protected void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);
+	public void criaEspecifico(){
 		af=new AFN();
+		super.criaEspecifico();
 	}
 	@Override
 	protected void toggleInicial(Estado e) {
 		e.toggleInicial();
 		af.togglaInicial(e.pegaNome());
-		
 	}
-
 	@SuppressWarnings( "deprecation" )
 	@Override
 	protected void editaTransicoes(String s) {
@@ -52,5 +50,30 @@ public class AFNActivity extends AFActivity{
 		}
 		vg.invalidate();
 	}
-
+	@Override
+	protected int trataIniciais(String s){
+		return Integer.parseInt(s);
+	}
+	@Override
+	protected String pegaTipo() {
+		return "AFN";
+	}
+	@Override
+	protected Boolean temLambda() {
+		return false;
+	}
+	@Override
+	public Salvavel pegaContexto() {
+		return AFNActivity.this;
+	}
+	@Override
+	protected void apagaEspecificos(){
+		super.apagaEspecificos();
+		apagaFilhos(true, findViewById(R.id.aflikegeraafn));
+		apagaFilhos(true, findViewById(R.id.aflikesimplifica));
+	}
+	@Override
+	protected String pegaNomeAtividade() {
+		return lingua.afn;
+	}
 }

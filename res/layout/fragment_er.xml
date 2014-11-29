@@ -5,10 +5,9 @@
     android:background="@drawable/fundo"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingRight="0dp"
     tools:context="edu.poc.languageemulatorandroid.ERActivity$PlaceholderFragment" >
-
-    <TextView
+     <TextView
         android:id="@+id/ertextoexpressao"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -19,7 +18,8 @@
         android:background="@drawable/menuinicialbotao"
         android:gravity="center_vertical"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/ertextopadrao"
@@ -32,16 +32,19 @@
         android:background="@drawable/menuinicialbotao"
         android:gravity="center_vertical"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="100dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginRight="60dp"
         android:background="@drawable/fundomenucimaesquerda"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:visibility="invisible" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,7 +64,6 @@
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white" >
 
-                <requestFocus />
             </EditText>
 
             <Button
@@ -107,15 +109,65 @@
 
     <TextView
         android:id="@+id/ertextosaida"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="30dp"
+        android:layout_alignLeft="@+id/ertextopadrao"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/ertextopadrao"
-        android:layout_marginLeft="149dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/menuinicialbotao"
         android:gravity="center_vertical"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:visibility="invisible" />
 
+    <Button
+        android:id="@+id/ergera"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/menusimulacentrodireita"
+        android:onClick="menuGerar"
+        android:text="@string/Gerar"
+        android:textColor="@android:color/white"
+        android:textColorLink="@android:color/white"
+        android:visibility="invisible" />
+
+<LinearLayout
+    android:id="@+id/ergeraleiaute"
+    android:layout_width="100dp"
+    android:layout_height="50dp"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:orientation="horizontal"
+    android:visibility="gone" >
+
+        <Button
+            android:id="@+id/ergeraafnl"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/menusimulacentrodireita"
+            android:onClick="gera"
+            android:text="@string/AFNL"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
+
+        <Button
+            android:id="@+id/ergeracancela"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/menusimulaextremadireita"
+            android:onClick="retorna"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
+
+    </LinearLayout>
+    
 </RelativeLayout>

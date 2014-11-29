@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="edu.poc.languageemulatorandroid.Salvavel" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/Salvavel.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="140" y="881"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="edu.poc.languageemulatorandroid.AFLikeActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/AFLikeActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="420" y="505"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="estado.Estado" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/estado/Estado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="141" y="-554"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="estado.EstadoMoore" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/estado/EstadoMoore.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="376" y="-424"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="edu.poc.languageemulatorandroid.AFActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/AFActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="707" y="498"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="edu.poc.languageemulatorandroid.AFDActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/AFDActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="663" y="-120"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="edu.poc.languageemulatorandroid.AFNLActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/AFNLActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="675" y="908"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="edu.poc.languageemulatorandroid.AFNActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/AFNActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="956" y="847"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="edu.poc.languageemulatorandroid.MActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/MActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="650" y="-634"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="edu.poc.languageemulatorandroid.MealyActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/MealyActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="894" y="-696"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="edu.poc.languageemulatorandroid.MooreActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/MooreActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="398" y="-710"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="edu.poc.languageemulatorandroid.MainActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/MainActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="126" y="8"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="edu.poc.languageemulatorandroid.ERActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/ERActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-125" y="1697"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="edu.poc.languageemulatorandroid.GRActivity" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/edu/poc/languageemulatorandroid/GRActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-124" y="964"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="transicoes.Transicoes" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/transicoes/Transicoes.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="135" y="1751"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="transicoes.TransicoesMealy" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/transicoes/TransicoesMealy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="601" y="1502"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="transicoes.Flecha" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/transicoes/Flecha.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="428" y="1785"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="tratadorEntrada.TratadorEntrada" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/tratadorEntrada/TratadorEntrada.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="750" y="1351"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="tratadorEntrada.MTratadorEntrada" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/tratadorEntrada/MTratadorEntrada.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="766" y="1160"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="tratadorEntrada.ATratadorEntrada" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/tratadorEntrada/ATratadorEntrada.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="380" y="1444"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="af.AF" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/af/AF.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="911" y="-153"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="af.AFD" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/af/AFD.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1007" y="272"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="af.AFN" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/af/AFN.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="989" y="403"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="af.AFNL" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/af/AFNL.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1017" y="589"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="er.ER" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/er/ER.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="957" y="1227"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="gr.GR" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/gr/GR.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="864" y="1664"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="gr.GRDireita" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/gr/GRDireita.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="656" y="1638"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="gr.GREsquerda" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/gr/GREsquerda.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="653" y="1761"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="lingua.Lingua" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/lingua/Lingua.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-113" y="-115"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="lingua.English" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/lingua/English.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-179" y="-823"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="lingua.Portugues" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/lingua/Portugues.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-45" y="-826"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="mmACHINE.MMachine" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/mmACHINE/MMachine.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1194" y="946"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="mmACHINE.MealyMachine" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/mmACHINE/MealyMachine.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1201" y="1265"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="mmACHINE.MooreMachine" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/mmACHINE/MooreMachine.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1146" y="-734"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="gerenciaArquivo.GerenciaArquivo" project="LanguageEmulatorAndroid" 
+    file="/LanguageEmulatorAndroid/src/gerenciaArquivo/GerenciaArquivo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1115" y="1732"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="36">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <association id="37">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="38" name="lingua"/>      
+      <multiplicity id="39" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="40">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="41">    
+    <bendpoint x="859" y="1458"/>    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="42" name="te"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="44">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <generalization id="45">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="29"/>  
+  </generalization>  
+  <association id="46">    
+    <bendpoint x="837" y="858"/>    
+    <bendpoint x="857" y="731"/>    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="47" name="afnl"/>      
+      <multiplicity id="48" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="49">    
+    <bendpoint x="1005" y="1512"/>    
+    <bendpoint x="1057" y="1468"/>    
+    <bendpoint x="1056" y="994"/>    
+    <bendpoint x="1051" y="751"/>    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="50" name="afnl"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="52">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="53" name="linguas"/>      
+      <multiplicity id="54" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="55">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="56">    
+    <bendpoint x="2" y="1519"/>    
+    <bendpoint x="282" y="1517"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="57" name="te"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="59">    
+    <bendpoint x="881" y="340"/>    
+    <bendpoint x="874" y="236"/>    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <generalization id="60">    
+    <bendpoint x="380" y="1536"/>    
+    <bendpoint x="298" y="1537"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="62">    
+    <bendpoint x="275" y="-204"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="63" name="estados">        
+        <position height="18" width="49" x="186" y="-139"/>      
+      </attribute>      
+      <multiplicity id="64" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="65">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="66">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="67" name="af"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="69">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <association id="70">    
+    <bendpoint x="840" y="-457"/>    
+    <bendpoint x="1133" y="-457"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="71" name="mm"/>      
+      <multiplicity id="72" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="73">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <generalization id="74">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <generalization id="75">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="76">    
+    <bendpoint x="477" y="1433"/>    
+    <bendpoint x="473" y="1522"/>    
+    <bendpoint x="326" y="1514"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="77" name="planoDeFundo"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="79">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <association id="80">    
+    <bendpoint x="1162" y="442"/>    
+    <bendpoint x="1143" y="360"/>    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="81" name="afd"/>      
+      <multiplicity id="82" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="84">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="29"/>  
+  </generalization>  
+  <association id="85">    
+    <bendpoint x="-20" y="1518"/>    
+    <bendpoint x="284" y="1516"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="86" name="te"/>      
+      <multiplicity id="87" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="88">    
+    <bendpoint x="655" y="1241"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="89" name="te"/>      
+      <multiplicity id="90" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="91">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <generalization id="92">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="93">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="94">    
+    <bendpoint x="-23" y="1986"/>    
+    <bendpoint x="293" y="1990"/>    
+    <bendpoint x="301" y="1548"/>    
+    <bendpoint x="589" y="1553"/>    
+    <bendpoint x="735" y="1570"/>    
+    <bendpoint x="749" y="1489"/>    
+    <bendpoint x="865" y="1479"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="95" name="er"/>      
+      <multiplicity id="96" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="97">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <association id="98">    
+    <bendpoint x="7" y="1518"/>    
+    <bendpoint x="274" y="1520"/>    
+    <bendpoint x="282" y="1361"/>    
+    <bendpoint x="530" y="1372"/>    
+    <bendpoint x="588" y="1445"/>    
+    <bendpoint x="731" y="1450"/>    
+    <bendpoint x="925" y="1482"/>    
+    <bendpoint x="942" y="1494"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="99" name="gr"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="101">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="102">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="103" name="inicioMove">        
+        <position height="18" width="60" x="203" y="-182"/>      
+      </attribute>      
+      <multiplicity id="104" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="105">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="106">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="107">    
+    <bendpoint x="277" y="-273"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="108" name="fimMove">        
+        <position height="18" width="50" x="249" y="-157"/>      
+      </attribute>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="110">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

@@ -3,10 +3,11 @@
     package="edu.poc.languageemulatorandroid"
     android:versionCode="1"
     android:versionName="1.0" >
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-sdk
         android:minSdkVersion="11"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="20" />
 
     <application
         android:allowBackup="true"
@@ -14,90 +15,112 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="edu.poc.languageemulatorandroid.MainActivity"
+            
+            android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard"
             android:label="@string/app_name"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> 
         </activity>
         <activity
-            android:name="edu.poc.languageemulatorandroid.ERActivity"
+            android:name=".ERActivity"
             android:configChanges="orientation|keyboardHidden|keyboard"
             android:label="@string/ER"
-            android:parentActivityName="edu.poc.languageemulatorandroid.MainActivity"
-            android:screenOrientation="landscape" >
-            android:launchMode="singleTask" 
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.poc.languageemulatorandroid.MainActivity" />
         </activity>
         <activity
-            android:name="edu.poc.languageemulatorandroid.GRActivity"
+            android:name=".GRActivity"
             android:configChanges="orientation|keyboardHidden|keyboard"
             android:label="@string/gr"
-            android:parentActivityName="edu.poc.languageemulatorandroid.MainActivity"
-            android:screenOrientation="landscape" >
-            android:launchMode="singleTask" 
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape" > 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.poc.languageemulatorandroid.MainActivity" />
         </activity>
         <activity
-            android:name="edu.poc.languageemulatorandroid.AFLikeActivity"
-            android:label="@string/title_activity_aflike"
-            android:parentActivityName="edu.poc.languageemulatorandroid.MainActivity" >
+            
+            android:name=".AFLikeActivity"
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.poc.languageemulatorandroid.MainActivity" />
         </activity>
-                <activity
-            android:name="edu.poc.languageemulatorandroid.AFDActivity"
+        <activity
+            
+            android:name=".AFDActivity"
             android:label="@string/af"
-            android:parentActivityName="edu.poc.languageemulatorandroid.MainActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="landscape" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.poc.languageemulatorandroid.MainActivity" />
         </activity>
-                        <activity
-            android:name="edu.poc.languageemulatorandroid.AFNActivity"
+        <activity
+            
+            android:name=".AFNActivity"
             android:label="@string/afn"
-            android:parentActivityName="edu.poc.languageemulatorandroid.MainActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="landscape" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.poc.languageemulatorandroid.MainActivity" />
         </activity>
-                                <activity
-            android:name="edu.poc.languageemulatorandroid.AFNLActivity"
+        <activity
+            
+            android:name=".AFNLActivity"
             android:label="@string/afnl"
-            android:parentActivityName="edu.poc.languageemulatorandroid.MainActivity"
-            android:screenOrientation="landscape" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.poc.languageemulatorandroid.MainActivity" />
-        </activity>                                <activity
-            android:name="edu.poc.languageemulatorandroid.MealyActivity"
-            android:label="@string/mmealy"
-            android:parentActivityName="edu.poc.languageemulatorandroid.MainActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="landscape" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.poc.languageemulatorandroid.MainActivity" />
         </activity>
-         <activity
-            android:name="edu.poc.languageemulatorandroid.MooreActivity"
-            android:label="@string/mmoore"
-            android:parentActivityName="edu.poc.languageemulatorandroid.MainActivity"
+        <activity
+            
+            android:name=".MealyActivity"
+            android:label="@string/mmealy"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="landscape" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.poc.languageemulatorandroid.MainActivity" />
+        </activity>
+        <activity
+            
+            android:name=".MooreActivity"
+            android:label="@string/mmoore"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.poc.languageemulatorandroid.MainActivity" />
+        </activity>
+
+
+        <activity
+            
+            android:name=".ImportaDadosActivity"
+            android:label="" >
+        <intent-filter>
+  			<action android:name="android.intent.action.VIEW" />
+  			<category android:name="android.intent.category.DEFAULT" />
+  			<data android:scheme="file"  android:host="*" android:pathPattern=".*\\.langemul" android:mimeType="*/*"  />
+  			<data android:pathPattern=".*\\.langemul" />
+			<data android:pathPattern=".*\\..*\\.langemul" />
+			<data android:pathPattern=".*\\..*\\..*\\.langemul" />
+			<data android:pathPattern=".*\\..*\\..*\\..*\\.langemul" />
+			<data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.langemul" />
+			</intent-filter>
         </activity>
     </application>
-
 </manifest>

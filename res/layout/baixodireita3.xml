@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/aflikeleiaute3baixodireita"
+                    android:layout_width="150dp"
+                    android:layout_height="230dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/fundomenubaixodireita"
+                    android:orientation="vertical"
+                    android:visibility="invisible" >
+
+    <Button
+        android:id="@+id/afliketogglafinalbaixodireita"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="108dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/fundobotao"
+        android:onClick="finalToggla"
+        android:text="@string/setfim"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/afliketogglainicialbaixodireita"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="108dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/fundobotao"
+        android:onClick="inicialToggle"
+        android:text="@string/setInit"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/aflikeeditatransicaobaixodireita"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="108dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/fundobotao"
+                        android:onClick="criaTrans"
+                        android:text="@string/newTrans"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/aflikeapagaestadobaixodireita"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="108dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/fundobotao"
+                        android:onClick="estadoDeleta"
+                        android:text="@string/statedelete"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/aflikecancelaleiaute3baixodireita"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="108dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/fundobotao"
+                        android:onClick="cancel"
+                        android:text="@string/cancel"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>

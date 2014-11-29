@@ -1,12 +1,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="edu.poc.languageemulatorandroid.MainActivity" >
+    tools:context="edu.poc.languageemulatorandroid.ERActivity" >
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/mainarquivo"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
+        android:title="@string/Arquivo"
+        app:showAsAction="never" android:menuCategory="container">
+        <menu>
+            <item android:id="@+id/mainabrir" android:title="@string/Abrir" android:onClick="abrir"/>
+        </menu>
+    </item>
+    <item android:id="@+id/mainlingua" android:title="@string/Lingua">
+        <menu>
+            <item android:id="@+id/mainportugues" android:title="@string/Portugues" android:checkable="false" android:checked="false" android:onClick="setaLingua"/>
+            <item android:id="@+id/mainenglish" android:title="@string/English" android:checkable="false" android:checked="false" android:onClick="setaLingua"/>
+        </menu>
+    </item>
 
 </menu>

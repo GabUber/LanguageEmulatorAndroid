@@ -1,0 +1,341 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    tools:context="edu.poc.languageemulatorandroid.GRActivity$PlaceholderFragment" >
+        <TextView
+        android:id="@+id/grtextoresposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="14dp"
+        android:textSize="12sp"
+        android:layout_toRightOf="@+id/grleiautemestre"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
+
+    <TextView
+        android:id="@+id/grtextoimprimeregras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_alignLeft="@+id/grtextoresposta"
+        android:layout_below="@+id/grtextoresposta"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
+
+    
+<LinearLayout
+    android:id="@+id/grleiaute"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:background="@drawable/fundomenucimaesquerda"
+    android:orientation="vertical"
+    android:visibility="invisible" >
+
+    <TextView
+        android:id="@+id/grtextviewmensagemconfirma"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.16"
+        android:text="@string/avisoGR"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/grmenucancela"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/menuinicialbotao"
+        android:onClick="cancela"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/grbutaoconfirma"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/menuinicialbotao"
+        android:onClick="confirmaCriacao"
+        android:text="@string/ok"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="12sp" />
+</LinearLayout>
+
+            <LinearLayout
+        android:id="@+id/grleiautemestre"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/fundomenucimaesquerda"
+        android:visibility="invisible"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp" >
+
+            <Button
+                android:id="@+id/grbutaoesquerda"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="92dp"
+                android:layout_height="25dp"
+                android:background="@drawable/menuinicialbotao"
+                android:onClick="mostraMenu"
+                android:text="@string/esquerda"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/grbutaodireita"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="92dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/menuinicialbotao"
+                android:onClick="mostraMenu"
+                android:text="@string/direita"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/grimputregraesquerda"
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/novaRegra"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="->"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/grimputregradireita"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/novaRegraDireita"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/grbutaoconfirmanovaregra"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/menuinicialbotao"
+                android:onClick="insereNovaRegra"
+                android:text="@string/ok"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp" >
+
+            <EditText
+                android:id="@+id/grimputremoveregra"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/removerRegra"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/grbutaoconfirmaremoveregra"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/menuinicialbotao"
+                android:onClick="removeRegra"
+                android:text="@string/ok"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp" >
+            
+            <EditText
+                android:id="@+id/grimputmoveregra"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/moveRegra"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/grbutaoconfirmamoveregra"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/menuinicialbotao"
+                android:onClick="moveRegra"
+                android:text="@string/ok"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp" >
+            
+            <EditText
+                android:id="@+id/grimputpadrao"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/padrao"
+                android:imeOptions="actionDone"
+                android:inputType="text|textNoSuggestions"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/grbutaoconfirmatestapadrao"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/menuinicialbotao"
+                android:onClick="testaPadrao"
+                android:text="@string/ok"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+<Button
+        android:id="@+id/grgera"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/menusimulacentrodireita"
+        android:onClick="menuGerar"
+        android:text="@string/Gerar"
+        android:textColor="@android:color/white"
+        android:textColorLink="@android:color/white"
+        android:visibility="invisible" />
+
+<LinearLayout
+    android:id="@+id/grgeraleiaute"
+    android:layout_width="100dp"
+    android:layout_height="50dp"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:orientation="horizontal"
+    android:visibility="gone" >
+
+        <Button
+            android:id="@+id/grgeraafnl"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/menusimulacentrodireita"
+            android:onClick="gera"
+            android:text="@string/AFNL"
+        android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
+
+        <Button
+            android:id="@+id/grgeracancela"
+        android:textSize="12sp"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/menusimulaextremadireita"
+            android:onClick="retorna"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
+
+    </LinearLayout>
+</RelativeLayout>

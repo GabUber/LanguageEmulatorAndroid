@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 import af.AFD;
-import android.os.Bundle;
+import android.content.Intent;
+import android.view.View;
+import conversor.ConversorAF;
+import estado.Estado;
 
 public class AFDActivity extends AFActivity {
 	@Override
-	protected void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);
+	public void criaEspecifico(){
 		af=new AFD();
+		super.criaEspecifico();
 	}
 	@Override
 	protected void toggleInicial(Estado e) {
@@ -25,7 +28,6 @@ public class AFDActivity extends AFActivity {
 		e.toggleInicial();
 		af.togglaInicial(e.pegaNome());
 	}
-
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void editaTransicoes(String s) {
@@ -64,5 +66,40 @@ public class AFDActivity extends AFActivity {
 		    vg.setBackground(planoDeFundo);
 		}
 		vg.invalidate();
+	}
+	@Override
+	protected String pegaTipo() {
+		return "AFD";
+	}
+	@Override
+	protected int trataIniciais(String s) throws AFLikeMalformedFileException {
+		int n = Integer.parseInt(s);
+		if (n>1) throw (new AFLikeMalformedFileException());
+		return n;
+	}
+	@Override
+	protected Boolean temLambda() {
+		return false;
+	}
+	@Override
+	protected void apagaEspecificos() {
+		super.apagaEspecificos();
+		apagaFilhos(true, findViewById(R.id.aflikegeraafd));
+	}
+
+	@Override
+	public Salvavel pegaContexto() {
+		return AFDActivity.this;
+	}
+	@Override
+	public void geraafn(View v){
+		arquivo = ((ConversorAF) (c)).toString(planoDeFundo, estados, "AFN", w, h);
+		preparaMensageiro(false);
+	    Intent intent = new Intent(pegaContexto(), AFNActivity.class);
+	    startActivity(intent);
+	}
+	@Override
+	protected String pegaNomeAtividade() {
+		return lingua.af;
 	}
 }

@@ -36,6 +36,9 @@ public abstract class AF {
 	public final ArrayList<Integer> retornaIniciais(){
 		return iniciais;
 	}
+	public final ArrayList<String> retornaEstados(){
+		return estados;
+	}
 	public final ArrayList<Integer> retornaFinais(){
 		return finais;
 	}
@@ -79,7 +82,7 @@ public abstract class AF {
 		modificado=true;
 		int n = transicoesEntrada.size();
 		for(int i = 0; i < n; i++){
-			if(destino.equals(estados.get(transicoesDestino.get(i))) && origem.equals(estados.get(transicoesOrigem.get(i))) && entrada.equals(alfabeto.get(transicoesDestino.get(i)))){
+			if(destino.equals(estados.get(transicoesDestino.get(i))) && origem.equals(estados.get(transicoesOrigem.get(i))) && entrada.equals(alfabeto.get(transicoesEntrada.get(i)))){
 				transicoesDestino.remove(i);
 				transicoesOrigem.remove(i);
 				transicoesEntrada.remove(i);
@@ -144,5 +147,37 @@ public abstract class AF {
 			if(estadoOrigem.equals(estados.get(transicoesOrigem.get(i)))&&transicao.equals(alfabeto.get(transicoesEntrada.get(i)))) al.add(transicoesDestino.get(i));
 		}
 		return al;
+	}
+	public ArrayList<ArrayList<ArrayList<String>>> geraTabela(){
+		if(modificado){
+			constroiAF();
+			modificado=false;
+		}
+		ArrayList<ArrayList<ArrayList<String>>> tabela = new ArrayList<ArrayList<ArrayList<String>>>();
+		int max=estados.size();
+		ArrayList<ArrayList<String>> temp;
+		ArrayList<Integer> entradas;
+		for (int i = 0; i<max; i++) {
+			temp=new ArrayList<ArrayList<String>>();
+			for (int j = 0; j < max; j++)temp.add(new ArrayList<String>());
+			tabela.add(temp);
+		}
+		int max2 = alfabeto.size();
+		for(int i=0;i<max;i++) for (int j = 0; j<max2;j++){
+			entradas = afl.pegaDestino(i, j);
+			int max3 = entradas.size();
+			for (int k = 0; k < max3; k++) tabela.get(i).get(entradas.get(k)).add(alfabeto.get(j));
+		}
+		return tabela;
+	}
+	public void inverte() {
+		ArrayList<Integer> temp = iniciais;
+		iniciais=finais;
+		finais=temp;
+		temp=transicoesOrigem;
+		transicoesOrigem=transicoesDestino;
+		transicoesDestino=temp;
+		constroiAF();
+		modificado=false;
 	}
 }

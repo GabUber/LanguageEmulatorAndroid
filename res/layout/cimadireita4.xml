@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/aflikeleiaute4cimadireita"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/fundomenucimadireita"
+                    android:orientation="vertical"
+                    android:visibility="invisible" >
+
+                    <EditText
+                        android:id="@+id/aflikenomeestadocimadireita"
+                        android:layout_width="198dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="8dp"
+                        android:ems="10"
+                        android:hint="@string/estadonome"
+                        android:imeOptions="actionDone"
+                        android:inputType="textNoSuggestions"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="10dp" >
+
+                        <Button
+                            android:id="@+id/aflikeokleiaute4cimadireita"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="40dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/menuinicialbotao"
+                            android:onClick="criaEstado"
+                            android:text="@string/ok"
+                            android:textColor="@android:color/white"
+                            android:textColorHint="@android:color/white"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/aflikecancelleiaute4cimadireita"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="105dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/fundobotao"
+                            android:gravity="center_vertical|center"
+                            android:onClick="cancel"
+                            android:text="@string/cancel"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>

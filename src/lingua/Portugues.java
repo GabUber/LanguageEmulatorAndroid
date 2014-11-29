@@ -1,0 +1,72 @@
+package lingua;
+
+import edu.poc.languageemulatorandroid.R;
+import android.content.res.Resources;
+
+public class Portugues extends Lingua {
+	public Portugues(Resources r){
+		app_name 	=r.getString(R.string.app_name);
+		af			=r.getString(R.string.af);
+		afn			=r.getString(R.string.afn);
+		afnl		=r.getString(R.string.afnl);
+		ER			=r.getString(R.string.ER);
+		gr			=r.getString(R.string.gr);
+		mmoore		=r.getString(R.string.mmoore);
+		mmealy		=r.getString(R.string.mmealy);
+		emulInit	=r.getString(R.string.emulInit);
+		criar_estado=r.getString(R.string.criar_estado);
+		cancel		=r.getString(R.string.cancel);
+		setInit		=r.getString(R.string.setInit	);
+		unsetInit	=r.getString(R.string.unsetInit);
+		setfim		=r.getString(R.string.setfim);
+		unsetfim	=r.getString(R.string.unsetfim);
+		statedelete	=r.getString(R.string.statedelete);
+		newTrans	=r.getString(R.string.newTrans);
+		move		=r.getString(R.string.move);
+		expressao	=r.getString(R.string.expressao);
+		ok			=r.getString(R.string.ok);
+		padrao		=r.getString(R.string.padrao);
+		esquerda	=r.getString(R.string.esquerda);
+		direita		=r.getString(R.string.direita);
+		novaRegra	=r.getString(R.string.novaRegra);
+		removerRegra=r.getString(R.string.removerRegra);
+		avisoGR		=r.getString(R.string.avisoGR);
+		novaRegraDireita=r.getString(R.string.novaRegraDireita);
+		aceito		=r.getString(R.string.aceito);
+		recusado	=r.getString(R.string.recusado);
+		estadonome	=r.getString(R.string.estadonome);
+		transtext	=r.getString(R.string.transtext);
+		removeTrans	=r.getString(R.string.removeTrans);
+		emulfim		=r.getString(R.string.emulfim);
+		entrada		=r.getString(R.string.entrada	);
+		start		=r.getString(R.string.start);
+		erexplicacao=r.getString(R.string.erexplicacao);
+		grexplicacao=r.getString(R.string.grexplicacao);
+		aflikeexplicacao=r.getString(R.string.aflikeexplicacao);
+		moveRegra	=r.getString(R.string.moveRegra);
+		Gerar		=r.getString(R.string.Gerar);
+		AFNL		=r.getString(R.string.AFNL);
+		Simplificar	=r.getString(R.string.Simplificar);
+		resetar		=r.getString(R.string.resetar);
+		passo		=r.getString(R.string.passo);
+		AF			=r.getString(R.string.AF);
+		GR			=r.getString(R.string.GR);
+		er			=r.getString(R.string.er);
+		MEALY		=r.getString(R.string.MEALY);
+		MOORE		=r.getString(R.string.MOORE);
+		AFD			=r.getString(R.string.AFD);
+		AFN			=r.getString(R.string.AFN);
+		GRE			=r.getString(R.string.GRE);
+		GRD			=r.getString(R.string.GRD);
+		Arquivo		=r.getString(R.string.Arquivo);
+		Salvar		=r.getString(R.string.Salvar);
+		Salvarcomo	=r.getString(R.string.Salvarcomo);
+		Abrir		=r.getString(R.string.Abrir);
+		SalvaEnvia	=r.getString(R.string.SalvaEnvia);
+		Lingua		=r.getString(R.string.Lingua);
+		deleta		=r.getString(R.string.deleta);
+		NomeArquivo	=r.getString(R.string.NomeArquivo);
+		sobreescrever=r.getString(R.string.sobreescrever);
+		textoEscolhedor=r.getString(R.string.textoEscolhedor);
+	}
+}

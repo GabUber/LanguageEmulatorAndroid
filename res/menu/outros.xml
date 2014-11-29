@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.poc.languageemulatorandroid.ERActivity" >
+
+    <item
+        android:id="@+id/arquivo"
+        android:orderInCategory="100"
+        android:title="@string/Arquivo"
+        app:showAsAction="never" android:menuCategory="container">
+        <menu>
+            <item android:id="@+id/salvar" android:title="@string/Salvar" android:onClick="salvar"/>
+            <item android:id="@+id/salvarcomo" android:title="@string/Salvarcomo" android:onClick="salvarcomo"/>
+            <item android:id="@+id/abrir" android:title="@string/Abrir" android:onClick="abrir"/>
+            <item android:id="@+id/salvaenvia" android:title="@string/SalvaEnvia" android:onClick="salvaenvia"/>
+        </menu>
+    </item>
+    <item android:id="@+id/lingua" android:title="@string/Lingua">
+        <menu>
+            <item android:id="@+id/portugues" android:title="@string/Portugues" android:checkable="false" android:checked="false" android:onClick="setaLingua"/>
+            <item android:id="@+id/english" android:title="@string/English" android:checkable="false" android:checked="false" android:onClick="setaLingua"/>
+        </menu>
+    </item>
+
+</menu>

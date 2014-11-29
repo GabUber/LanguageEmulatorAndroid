@@ -4,21 +4,24 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 import mmACHINE.MooreMachine;
-import android.os.Bundle;
+import transicoes.Transicoes;
+import android.content.Intent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.EditText;
+import android.widget.RelativeLayout;
+import conversor.ConversorMM;
+import estado.Estado;
+import estado.EstadoMoore;
 
 public class MooreActivity extends MActivity {
-	protected void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);
+	@Override
+	public void criaEspecifico(){
 		mm=new MooreMachine();
+		super.criaEspecifico();
 	}
 	@Override
-	protected Estado newEstado(float x, float y, ViewGroup vg){
+	protected Estado newEstado(float x, float y, RelativeLayout vg){
 		return new EstadoMoore(x,y,vg);
 	}
-
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void editaTransicoes(String s) {
@@ -57,9 +60,7 @@ public class MooreActivity extends MActivity {
 		    vg.setBackground(planoDeFundo);
 		}
 		vg.invalidate();
-
 	}
-
 	@Override
 	protected void geraEstado(String s) {
 		StringTokenizer st = new StringTokenizer(s, "/");
@@ -70,25 +71,21 @@ public class MooreActivity extends MActivity {
 	@Override
 	public void criaEstado(View v){
 		EstadoMoore es = (EstadoMoore)inicioMove;
-		String s = ((EditText) findViewById(R.id.aflikeentradanomeestadocimaesquerda)).getText().toString();
-		if(s.equals("")) s = ((EditText) findViewById(R.id.aflikenomeestadobaixoesquerda)).getText().toString();
-		if(s.equals("")) s = ((EditText) findViewById(R.id.aflikenomeestadocimadireita)).getText().toString();
-		if(s.equals("")) s = ((EditText) findViewById(R.id.aflikenomeestadobaixodireita)).getText().toString();
+		String s = entrada.getText().toString();
 		StringTokenizer st = new StringTokenizer(s, "/");
 		String nome;
 		if(s==null||s.equals("")||st.countTokens()<2){
-			invizibilizaTudo();
+			aInvizibilizar.setVisibility(View.GONE);
 			menuaberto=false;
 			inicioMove.setaExiste(false, vg);
 			vg.removeView(inicioMove);
 			return;
-		
 		}
 		try {
 			geraEstado(s);
 		}
 		catch (RuntimeException re){
-			invizibilizaTudo();
+			aInvizibilizar.setVisibility(View.GONE);
 			menuaberto=false;
 			inicioMove.setaExiste(false, vg);
 			vg.removeView(inicioMove);
@@ -101,14 +98,62 @@ public class MooreActivity extends MActivity {
 		setaEscutador(inicioMove);
 		estados.add(inicioMove);
 		nomeEstados.add(nome);
-		invizibilizaTudo();
+		aInvizibilizar.setVisibility(View.GONE);
 		menuaberto=false;
 		inicioMove.setVisibility(View.VISIBLE);
 		vg.invalidate();
 		tentouCriar=false;
-	}	
+	}
 	@Override
-	protected PlanodeFundo newPlanodeFundo(int width, int height){
-		return new PlanodeFundo(width, height);
+	protected Transicoes newPlanodeFundo(int width, int height){
+		return new Transicoes(width, height, getResources());
+	}
+	@Override
+	protected String pegaTipo() {
+		return "Moore";
+	}
+	@Override
+	public void geramealy(View v) {
+		arquivo = ((ConversorMM)(c)).toMealy(planoDeFundo, estados, w, h);
+		preparaMensageiro(false);
+	    Intent intent = new Intent(pegaContexto(), MealyActivity.class);
+	    startActivity(intent);
+	}
+	@Override
+	public void geramoore(View v) {}
+	@Override
+	public Salvavel pegaContexto() {
+		return MooreActivity.this;
+	}
+	@Override
+	protected void trataEstados(StringTokenizer st, double fatorW, double fatorH) throws AFLikeMalformedFileException{
+		int n = Integer.parseInt(st.nextToken());
+		for (int i = 0; i < n;i++){
+			StringTokenizer temp =new StringTokenizer(te.estado(st.nextToken()), "/");
+			String s1=temp.nextToken();
+			String s2=temp.nextToken();
+			if(s1.length()==0) throw new AFLikeMalformedFileException();
+			geraEstado(s1+'/'+s2);
+			float x = (float) ((Float.parseFloat(st.nextToken())) * fatorW);
+			float y = (float) ((Float.parseFloat(st.nextToken())) * fatorH);
+			inicioMove=newEstado(x+dimensaomm/2, y+dimensaomm/2, vg);
+			inicioMove.setVisibility(View.VISIBLE);
+			vg.addView(inicioMove);
+			planoDeFundo.adicionouEstado(x, y, this, vg);
+			inicioMove.setaNome(s1);
+			((EstadoMoore)inicioMove).setaSaida(s2);
+			estados.add(inicioMove);
+			setaEscutador(inicioMove);
+			nomeEstados.add(s1);
+			vg.invalidate();
+		}
+	}
+	@Override
+	protected String pegaNomeAtividade() {
+		return lingua.mmoore;
+	}
+	@Override
+	protected View pegaAApagarEspecifico() {
+		return findViewById(R.id.aflikegeramoore);
 	}
 }

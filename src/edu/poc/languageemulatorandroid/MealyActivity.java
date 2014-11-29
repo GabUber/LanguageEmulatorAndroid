@@ -4,46 +4,22 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 import mmACHINE.MealyMachine;
-import android.os.Bundle;
-import android.view.ViewGroup;
+import transicoes.Transicoes;
+import transicoes.TransicoesMealy;
+import android.content.Intent;
+import android.view.View;
+import android.widget.RelativeLayout;
+import conversor.ConversorMM;
+import estado.Estado;
 
 public class MealyActivity extends MActivity {
-	protected class PlanodeFundoMealy extends PlanodeFundo{
-
-		public PlanodeFundoMealy(int maxWidth, int maxHeight) {
-			super(maxWidth, maxHeight);
-		}
-		@Override
-		public void removeTransicaoEspecifica(int origem, int destino, String se){
-			StringBuilder s = new StringBuilder("");
-			String entrada = new StringTokenizer(se,"/").nextToken();
-			StringTokenizer st = new StringTokenizer (textos.get(origem).get(destino).getText().toString(), ",");
-			boolean primeira = true;
-			while(st.hasMoreTokens()){
-				String temp=st.nextToken(); 
-				String t =new StringTokenizer (temp, "/").nextToken();
-				if(!entrada.equals(t)){
-					if(primeira){
-						primeira=false;
-						s.append(temp);
-					}
-					else{
-						s.append(", ");
-						s.append(temp);
-					}
-				}
-			}
-			if(s.length()==0) removeuTransicao(origem, destino);
-			else textos.get(origem).get(destino).setText(s);
-		}
-	}
 	@Override
-	protected void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);
+	public void criaEspecifico(){
 		mm=new MealyMachine();
+		super.criaEspecifico();
 	}
 	@Override
-	protected Estado newEstado(float x, float y, ViewGroup Vg){
+	protected Estado newEstado(float x, float y, RelativeLayout vg){
 		return new Estado(x,y,vg);
 	}
 	@SuppressWarnings("deprecation")
@@ -93,13 +69,37 @@ public class MealyActivity extends MActivity {
 			vg.invalidate();
 		}
 	}
-
 	@Override
 	protected void geraEstado(String s) {
 		mm.adicionaEstado(s, null);
 	}
 	@Override
-	protected PlanodeFundo newPlanodeFundo(int width, int height){
-		return new PlanodeFundoMealy(width, height);
+	protected Transicoes newPlanodeFundo(int width, int height){
+		return new TransicoesMealy(width, height, getResources());
+	}
+	@Override
+	protected String pegaTipo() {
+		return "Mealy";
+	}
+	@Override
+	public void geramealy(View v) {}
+	@Override
+	public void geramoore(View v) {
+		arquivo = ((ConversorMM)(c)).toMoore(planoDeFundo, estados, w, h);
+		preparaMensageiro(false);
+	    Intent intent = new Intent(pegaContexto(), MooreActivity.class);
+	    startActivity(intent);
+	}
+	@Override
+	public Salvavel pegaContexto() {
+		return MealyActivity.this;
+	}
+	@Override
+	protected String pegaNomeAtividade() {
+		return lingua.mmealy;
+	}
+	@Override
+	protected View pegaAApagarEspecifico() {
+		return findViewById(R.id.aflikegeramealy);
 	}
 }

@@ -2,7 +2,9 @@ package er;
 
 import java.util.ArrayList;
 import java.util.Stack;
+import java.util.StringTokenizer;
 
+import tratadorEntrada.ATratadorEntrada;
 import af.AFNL;
 
 public class ER {
@@ -19,11 +21,15 @@ public class ER {
 	protected int contadorEstados;
 	protected char ultimoLido, atual;
 	protected int contadorPendencias;
+	protected int i;
+	ATratadorEntrada te;
+	protected String s;
 	public ER(){
 		expressao = "#invalid";
 		pilha = new Stack<Bloco>();
 		pilhaPendencias=new Stack<Integer>();
 		blocoAtual=new Bloco();
+		te = new ATratadorEntrada();
 	}
 	public void novaExpressão(String s)throws RuntimeException{//constroi afnl seguindo algoritmo de construção de thompson
 		if (s.length()==0) throw (new RuntimeException());
@@ -32,13 +38,14 @@ public class ER {
 		aux.adicionaEstado("fim");
 		aux.togglaInicial("inicio");
 		aux.togglaFinal("fim");
+		this.s=s;
 		blocoAtual.primeiroIncluido="inicio";
 		blocoAtual.ultimoIncluido="inicio";
 		blocoAtual.penultimoIncluido=null;
 		contadorEstados=0;
 		contadorPendencias=0;
 		atual='*';
-		for(int i = 0; i < s.length(); i++){
+		for(i = 0; i < s.length(); i++){
 			ultimoLido=atual;
 			atual=s.charAt(i);
 			if(atual=='(') abreParenteses(aux);
@@ -47,12 +54,14 @@ public class ER {
 			else if(atual=='+') mais(aux);
 			else if(atual=='?') interrogacao(aux);
 			else if(atual=='|') ou(aux);
+			else if(atual==' ') continue;
 			else caractere(aux);
 		}
 		resolvePendencias(aux);
 		aux.adicionaTransicao(blocoAtual.ultimoIncluido, "fim", null);
 		if(!pilha.isEmpty()) throw (new RuntimeException());
-		else{expressao=s;
+		else{
+			expressao=s;
 			afnl=aux;
 		}
 	}
@@ -62,7 +71,7 @@ public class ER {
 	}
 	private void empilhaELiga(AFNL a, String s){
 		Bloco aux = new Bloco();
-		aux.primeiroIncluido= ((Integer)(contadorEstados)).toString();
+		aux.primeiroIncluido="a" + ((Integer)(contadorEstados)).toString();
 		aux.ultimoIncluido = aux.primeiroIncluido;
 		aux.penultimoIncluido=null;
 		contadorEstados++;
@@ -81,61 +90,68 @@ public class ER {
 		}
 		a.add(blocoAtual.ultimoIncluido);
 		blocoAtual.penultimoIncluido=blocoAtual.ultimoIncluido;
-		blocoAtual.ultimoIncluido=((Integer)(contadorEstados)).toString();
+		blocoAtual.ultimoIncluido="a" + ((Integer)(contadorEstados)).toString();
 		contadorEstados++;
 		aux.adicionaEstado(blocoAtual.ultimoIncluido);
-		for(int i = 0; i < a.size(); i++){
-			aux.adicionaTransicao(a.get(i), blocoAtual.ultimoIncluido, null);
+		for(int j = 0; j < a.size(); j++){
+			aux.adicionaTransicao(a.get(j), blocoAtual.ultimoIncluido, null);
 		}
 	}
 	private void ou(AFNL aux) {
 		empilhaELiga(aux, blocoAtual.primeiroIncluido);
 		contadorPendencias++;
-		
 	}
 	private void caractere(AFNL aux) {
 		blocoAtual.penultimoIncluido=blocoAtual.ultimoIncluido;
-		blocoAtual.ultimoIncluido=((Integer)(contadorEstados)).toString();
+		blocoAtual.ultimoIncluido="a" + ((Integer)(contadorEstados)).toString();
 		contadorEstados++;
 		aux.adicionaEstado(blocoAtual.ultimoIncluido);
-		aux.adicionaTransicao(blocoAtual.penultimoIncluido, blocoAtual.ultimoIncluido,  ((Character)atual).toString());
+		StringBuilder sb = new StringBuilder("");
+		while(!te.protegido(atual) && atual!=' '){
+			sb.append(atual);
+			i++;
+			atual= i<s.length() ? s.charAt(i) : '*';
+		}
+		if(i!=s.length()){
+			i--;
+			atual=s.charAt(i);
+		}
+		aux.adicionaTransicao(blocoAtual.penultimoIncluido, blocoAtual.ultimoIncluido,  sb.toString());
 	}
 	private void interrogacao(AFNL aux) {
 		if(ultimoLido=='('||ultimoLido=='*'||ultimoLido=='+'||ultimoLido=='?') throw (new RuntimeException());
 		aux.adicionaTransicao(blocoAtual.penultimoIncluido, blocoAtual.ultimoIncluido, null);
-		
 	}
 	private void mais(AFNL aux) {
 		if(ultimoLido=='('||ultimoLido=='*'||ultimoLido=='+'||ultimoLido=='?') throw (new RuntimeException());
 		aux.adicionaTransicao(blocoAtual.ultimoIncluido, blocoAtual.penultimoIncluido, null);
-		
 	}
 	private void asterisco(AFNL aux) {
 		if(ultimoLido=='('||ultimoLido=='*'||ultimoLido=='+'||ultimoLido=='?') throw (new RuntimeException());
 		aux.adicionaTransicao(blocoAtual.ultimoIncluido, blocoAtual.penultimoIncluido, null);
 		aux.adicionaTransicao(blocoAtual.penultimoIncluido, blocoAtual.ultimoIncluido, null);
-		
 	}
 	private void fechaParenteses(AFNL aux) {
 		contadorPendencias++;
 		resolvePendencias(aux);
 		contadorPendencias=pilhaPendencias.pop();
-		
 	}
 	private void abreParenteses(AFNL aux) {
 		empilhaELiga(aux, blocoAtual.ultimoIncluido);
 		pilhaPendencias.push(contadorPendencias);
 		contadorPendencias=0;
-		
 	}
 	public boolean testaExpressão(String s){
 		boolean resposta=afnl.preparaSimulacao();
-		int i;
 		if(s==null||s.equals("")) return resposta;
-		else for(i=0;i<s.length();i++){
-			resposta=afnl.simula(((Character)s.charAt(i)).toString());
+		else{
+			StringTokenizer st = new StringTokenizer(s);
+			resposta=afnl.simula(st);
 		}
 		afnl.paraSimulacao();
 		return resposta;
+	}
+	public AFNL retornaAF(){
+		return afnl;
 	}
 }

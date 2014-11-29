@@ -30,7 +30,7 @@ public class AFNL extends AFN {
 	public void removeEstado(String nome){
 		int temp = (estados.indexOf(nome));
 		for (int i = 0; i<transicoesLambdaOrigem.size();i++){
-			if(temp==transicoesLambdaOrigem.get(i) || temp==transicoesDestino.get(i)){
+			if(temp==transicoesLambdaOrigem.get(i) || temp==transicoesLambdaDestino.get(i)){
 				transicoesLambdaOrigem.remove((int)i);
 				transicoesLambdaDestino.remove((int)i);
 				i--;
@@ -106,5 +106,18 @@ public class AFNL extends AFN {
 		}
 		afl.setaEstadosAtivos(transitados);
 		return (respostaInicial || respostaSecundaria);
+	}
+	public ArrayList<ArrayList<ArrayList<String>>> geraTabela(){
+		ArrayList<ArrayList<ArrayList<String>>> tabela = super.geraTabela();
+		int max = transicoesLambdaOrigem.size();
+		for (int i = 0; i < max; i++)tabela.get(transicoesLambdaOrigem.get(i)).get(transicoesLambdaDestino.get(i)).add("λ");
+		return tabela;
+	}
+	@Override
+	public void inverte() {
+		super.inverte();
+		ArrayList<Integer> temp = transicoesLambdaOrigem;
+		transicoesLambdaOrigem=transicoesLambdaDestino;
+		transicoesLambdaDestino=temp;
 	}
 }

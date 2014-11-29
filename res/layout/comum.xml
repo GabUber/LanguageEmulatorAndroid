@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comum"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<LinearLayout
+    android:id="@+id/inicial"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="020dp"
+    android:layout_marginTop="0dp"
+    android:background="@drawable/fundomenucimaesquerda"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/explicacao"
+            android:layout_width="348dp"
+            android:layout_height="104dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/aflikeexplicacao"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/aflikestartbutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/fundobotao"
+            android:onClick="someInicial"
+            android:text="@string/ok"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+        <LinearLayout
+        android:id="@+id/menuarquivo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/menusimulacentroesquerda"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.45" >
+
+            <LinearLayout
+                android:id="@+id/adicioneaqui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <EditText
+                android:id="@+id/nomearquivo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:hint="@string/NomeArquivo"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textColorLink="@android:color/white" >
+
+            </EditText>
+
+            <Button
+                android:id="@+id/butaoconfirma"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/menuinicialbotao"
+                android:onClick="confirma"
+                android:text="@string/Salvar"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/white" />
+
+            <Button
+                android:id="@+id/butaodeleta"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/preto"
+                android:onClick="deleta"
+                android:text="@string/deleta"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/white" />
+
+            <Button
+                android:id="@+id/butaocancela"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/fundobotao"
+                android:text="@string/cancel"
+                android:onClick="cancelaComum"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+ <LinearLayout
+     android:id="@+id/leiauteconfirma"
+     android:layout_width="150dp"
+     android:layout_height="100dp"
+     android:layout_centerHorizontal="true"
+     android:layout_centerVertical="true"
+     android:background="@drawable/menusimulacentroesquerda"
+     android:orientation="vertical"
+     android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textoconfirma"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/confirmaok"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:background="@drawable/menuinicialbotao"
+                android:onClick="confirmamenuconfirma"
+                android:text="@string/ok"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/confirmacancela"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/fundobotao"
+                android:onClick="apagamenuconfirma"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
